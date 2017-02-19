@@ -4,6 +4,7 @@ import cookielib
 import json
 import re
 import os
+import sys
 import urllib2
 #https://github.com/AxelAli/Picture-Quest
 
@@ -11,10 +12,9 @@ def get_soup(url,header):
     return BeautifulSoup(urllib2.urlopen(urllib2.Request(url,headers=header)),'html.parser')
 
 
-query = raw_input("What do i search for? ")#you can search for single words like "monkey" or "Horse", but you can also search dalmatian dog" or "red car"
+
+query=sys.argv[1]
 image_type="*"
-query= query.split()
-query='+'.join(query)
 url="https://www.google.co.in/search?q="+query+"&source=lnms&tbm=isch"
 print url
 #we store them in DIR/query , ex. data/horse
