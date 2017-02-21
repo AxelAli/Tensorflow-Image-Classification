@@ -18,13 +18,13 @@ https://github.com/llSourcell/tensorflow_image_classifier
 
 ### Getting Started!
 
-Clone This Proyect
+Clone This Project
 (In Terminal or Desktop App)
 ```
 git clone https://github.com/AxelAli/Tensorflow-Image-Classification.git
 ```
 
-Start Docker! (in proyect folder)
+Start Docker! (in project folder)
 ```
 docker run -it -v $HOME/Tensorflow-Image-Classification:/Tensorflow-Image-Classification  gcr.io/tensorflow/tensorflow:latest-devel
 ```
@@ -71,7 +71,7 @@ What do i search for?
 
 Here you can write anything you want, (Ex. Dog,Car,Flower).
 
-You can also add extra words to be more especific or to get a wider dataset (Ex. White Dog,Ferrari Car, Sun Flower).
+You can also add extra words to be more specific or to get a wider dataset (Ex. White Dog,Ferrari Car, Sun Flower).
 
 The terminal will start to output each image downloaded 
 
@@ -107,7 +107,7 @@ python GetImagesfromgoogleCommand.py RAT
 ```
 **NOTE!**
 
-If you want to search something like "Smashed Potatoes" or "Sports Car" **replace all spaces** with '+' !
+If you want to search something like "Mashed Potatoes" or "Sports Car" **replace all spaces** with '+' !
 
 Example:
 ```
@@ -124,7 +124,7 @@ Your folder will look like this:
 
 NOTE:All downloads are in the data folder, there is also a folder for each query.
 
-####Lets Train!
+####Let's Train!
 Just Run the following commands
 
 ```
@@ -133,9 +133,9 @@ python image_retraining/retrain.py --bottleneck_dir=/data/bottlenecks --how_many
 #####What are these arguments?
 **--bottleneck_dir :** Bottleneck directory, you should not change this unless you want to change things later (/PATH/TO/FOLDER)
 
-**--how_many_training_steps : **Traning Steps, these make your acuaracy better (XXXX Number)
+**--how_many_training_steps : **Training Steps, these make your accuracy better (XXXX Number)
 
-[**NOTE:** if you have <1000 images just place **1000**]  If you arent getting enough Precision , increase images and traning steps
+[**NOTE:** if you have <1000 images just place **1000**]  If you aren't getting enough Precision , increase images and training steps
 
 **--model_dir:** Model directory, you should not change this unless you want to change things later (/PATH/TO/FOLDER)
 
@@ -143,7 +143,7 @@ python image_retraining/retrain.py --bottleneck_dir=/data/bottlenecks --how_many
 
 **--output_labels:** Output Labels files, you should not change this unless you want to change things later (/PATH/TO/FOLDER/FILE.txt)
 
-**--image_dir:** Image Directory , you should not change this unless you want to change things later (/PATH/TO/FOLDER)
+**--img_dir:** Image Directory , you should not change this unless you want to change things later (/PATH/TO/FOLDER)
 
 [**NOTE: DO NOT** , i repeat , **DO NOT** place folders inside folders
 
@@ -157,9 +157,9 @@ You should get:
 >> Downloading inception-XXXX-XX-XX.tgz %
 ```
 
-Wait till downloaded (Its Around 200mb)
+Wait till downloaded (It's Around 200 mb)
 
-You Might get this Waring, dont worry
+You Might get this Warning, dont worry
 ```
 W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use XXX instructions, but these are available on your machine and could speed up CPU computations.
 ```
@@ -185,7 +185,7 @@ Not a JPEG file: starts with 0x89 0x50
 ```
 Delete the image that it got stuck with. (in this case *_47.jpg inside data/apple+pie/)
 
-**Why does this happen?!** [is a renamed file (png>jpg) , you webbrowser can show it , but the library doesnt]
+**Why does this happen?!** [is a renamed file (png>jpg) , your web browser can show it , but the library does not]
 
 After this, repeat this command:
 Just Run the following commands
@@ -202,7 +202,7 @@ And when finished:
 ```
 Final test accuracy = XX.X%
 ```
-Great! We Trained it sucessfully!
+Great! We Trained it successfully!
 
 ###Guessing the images!
 
@@ -224,10 +224,12 @@ The only argument is the path to the file:
 You will get :
 ```
 cheesecake (score = 0.90928)
-carrotcake (score = 0.06337)
+carrot cake (score = 0.06337)
 apple pie (score = 0.02339)
 smashed potatoes (score = 0.00396)
 ```
-(Multiply result by 10 ,[ Ex. score = 0.90928 x 10 = 90.9% ])This is the likehood that the image is of a cheesecake
+(Multiply result by 10 ,[ Ex. score = 0.90928 x 10 = 90.9% ])This is the likelihood that the image is of a cheesecake
 
-If you want to add another item just start agian from **Lets Train!**
+If you want to add another item just start again from **Let ' s Train!**
+
+
