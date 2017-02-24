@@ -4,6 +4,9 @@
 # Tensorflow-Image-Classification
 Easy and updated tensorflow image classificator
 
+#See this proyect being used in a webpage:
+
+https://github.com/AxelAli/Tensorflow-Image-Classifier-Web-Demo
 ##BASED ON / Thanks To:
 https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/
 https://github.com/llSourcell/tensorflow_image_classifier
@@ -232,4 +235,7 @@ smashed potatoes (score = 0.00396)
 
 If you want to add another item just start again from **Let ' s Train!**
 
+
+### Known Bugs / Errors / Improvements
+>We should have a system that checks every image and checks if it is a renamed png
 
