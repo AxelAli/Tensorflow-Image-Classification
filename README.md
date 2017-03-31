@@ -4,7 +4,7 @@
 # Tensorflow-Image-Classification
 Easy and updated tensorflow image classificator
 
-#See this proyect being used in a webpage:
+# See this proyect being used in a webpage:
 
 https://github.com/AxelAli/Tensorflow-Image-Classifier-Web-Demo
 ##BASED ON / Thanks To:
@@ -26,7 +26,6 @@ Clone This Project
 ```
 git clone https://github.com/AxelAli/Tensorflow-Image-Classification.git
 ```
-
 Start Docker! (in project folder)
 ```
 docker run -it -v $HOME/Tensorflow-Image-Classification:/Tensorflow-Image-Classification  gcr.io/tensorflow/tensorflow:latest-devel
@@ -51,7 +50,7 @@ cd ..
 cd /Tensorflow-Image-Classification
 git pull
 ```
-####Optional (Getting a dataset)
+#### Optional (Getting a dataset)
 Great!
 
 Install Dependencies for The Image Downloader (Optional, Makes it easier to download)
@@ -63,7 +62,7 @@ sudo pip install BeautifulSoup bs4 requests image
 We have 2 Python scripts to download images from google.
 
 
-#####With "user interface"
+##### With "user interface"
 ```
 python GetImagesfromgoogle.py
 ```
@@ -87,7 +86,7 @@ there are total 100 images
 5
 [...]
 ```
-#####With console commands
+##### With console commands
 ```
 python GetImagesfromgoogleCommand.py
 ```
@@ -127,13 +126,13 @@ Your folder will look like this:
 
 NOTE:All downloads are in the data folder, there is also a folder for each query.
 
-####Let's Train!
+#### Let's Train!
 Just Run the following commands
 
 ```
 python image_retraining/retrain.py --bottleneck_dir=/data/bottlenecks --how_many_training_steps 1000  --model_dir=/data/inception --output_graph=/data/retrained_graph.pb --output_labels=/data/retrained_labels.txt --image_dir ./data/
 ```
-#####What are these arguments?
+##### What are these arguments?
 **--bottleneck_dir :** Bottleneck directory, you should not change this unless you want to change things later (/PATH/TO/FOLDER)
 
 **--how_many_training_steps : **Training Steps, these make your accuracy better (XXXX Number)
@@ -181,20 +180,43 @@ Creating bottleneck at /data/bottlenecks/XXX/*_XX.jpg.txt
 ```
 Not a JPEG file: starts with 0x89 0x50
 ```
+
+**UPDATE: April/2017**
+
+
+
+YOU MIGHT NEED TO INSTALL ImageMagick
+
+SEE:
+
+http://www.imagemagick.org/script/download.php
+
+Run the following commands (inside each folder [example: data/dog])!
+
+```
+mogrify -format jpg *.ashx
+rm *.ashx
+mogrify -format jpg *.png
+rm *.png
+mogrify -format jpg *.jpeg
+rm *.jpeg
+mogrify -format jpg *.jpg
+```
+~~~~~~~~ NO LONGER NEEDED AS OF APRIL/17 ~~~~~~~~
+
 **SOLUTION**
 ```
-Creating bottleneck at /data/bottlenecks/apple+pie/*_47.jpg.txt
+Creating bottleneck at /data/bottlenecks/apple+pie/*_47.jpg.txt.
 Not a JPEG file: starts with 0x89 0x50
 ```
 Delete the image that it got stuck with. (in this case *_47.jpg inside data/apple+pie/)
 
 **Why does this happen?!** [is a renamed file (png>jpg) , your web browser can show it , but the library does not]
 
-After this, repeat this command:
-Just Run the following commands
-```
-python image_retraining/retrain.py --bottleneck_dir=/data/bottlenecks --how_many_training_steps 1000  --model_dir=/data/inception --output_graph=/data/retrained_graph.pb --output_labels=/data/retrained_labels.txt --image_dir ./data/
-```
+After this, repeat 
+**Let's Train!**
+
+~~~~~~~~ NO LONGER NEEDED AS OF APRIL/17 ~~~~~~~~
 
 After a couple minutes you should start seeing 
 ```
@@ -207,7 +229,7 @@ Final test accuracy = XX.X%
 ```
 Great! We Trained it successfully!
 
-###Guessing the images!
+### Guessing the images!
 
 Now we just test an image!
 
@@ -220,7 +242,7 @@ Run the following:
 ```
 python label_image.py  data/cheesecake/*_9.jpg
 ```
-#####What are these arguments?
+##### What are these arguments?
 The only argument is the path to the file:
 (PATH/TO/FILE.jpg)
 
@@ -237,5 +259,7 @@ If you want to add another item just start again from **Let ' s Train!**
 
 
 ### Known Bugs / Errors / Improvements
->We should have a system that checks every image and checks if it is a renamed png
+~~>We should have a system that checks every image and checks if it is a renamed png~~
+
+Fixed April/17
 
