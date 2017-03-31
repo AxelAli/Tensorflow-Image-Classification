@@ -7,7 +7,7 @@ Easy and updated tensorflow image classificator
 # See this proyect being used in a webpage:
 
 https://github.com/AxelAli/Tensorflow-Image-Classifier-Web-Demo
-##BASED ON / Thanks To:
+## BASED ON / Thanks To:
 https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/
 https://github.com/llSourcell/tensorflow_image_classifier
 
@@ -137,7 +137,7 @@ python image_retraining/retrain.py --bottleneck_dir=/data/bottlenecks --how_many
 
 **--how_many_training_steps : **Training Steps, these make your accuracy better (XXXX Number)
 
-[**NOTE:** if you have <1000 images just place **1000**]  If you aren't getting enough Precision , increase images and training steps
+[**NOTE:** if you have <1000 images just place **1000**]  If you arent getting enough Precision , increase images and training steps
 
 **--model_dir:** Model directory, you should not change this unless you want to change things later (/PATH/TO/FOLDER)
 
