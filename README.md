@@ -130,7 +130,7 @@ NOTE:All downloads are in the data folder, there is also a folder for each query
 Just Run the following commands
 
 ```
-python image_retraining/retrain.py --bottleneck_dir=/data/bottlenecks --how_many_training_steps 1000  --model_dir=/data/inception --output_graph=/data/retrained_graph.pb --output_labels=/data/retrained_labels.txt --image_dir ./data/
+python image_retraining/retrain.py --bottleneck_dir=./processed-data/bottlenecks --how_many_training_steps 1000  --model_dir=./processed-data/inception --output_graph=./processed-data/retrained_graph.pb --output_labels=./processed-data/retrained_labels.txt --image_dir ./data/
 ```
 ##### What are these arguments?
 **--bottleneck_dir :** Bottleneck directory, you should not change this unless you want to change things later (/PATH/TO/FOLDER)
